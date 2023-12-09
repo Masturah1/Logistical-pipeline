@@ -18,7 +18,7 @@ jobs:
                 password: ${{ secrets.DOCKERHUB_PASSWORD }}
             - name: "Build the image for the App"
               env:
-                IMAGE_NAME: logis11
+                IMAGE_NAME: logis1
                 VERSION: newest
                 USERNAME: masturrh
               run: |

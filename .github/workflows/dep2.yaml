@@ -12,7 +12,7 @@ jobs:
               run: "sudo docker rm -f logis || true"
 
             - name: "Get the code from Docker Hub"
-              run: "sudo docker pull masturrh/logis11:newest"
+              run: "sudo docker pull masturrh/logis1:newest"
 
             - name: "Run the image as a container"
-              run: "sudo docker run -d -p 80:80 --name logis masturrh/logis11:newest"
+              run: "sudo docker run -d -p 80:80 --name logis masturrh/logis1:newest"
