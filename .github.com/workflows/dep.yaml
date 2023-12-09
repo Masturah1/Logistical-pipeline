@@ -20,7 +20,7 @@ jobs:
               env:
                 IMAGE_NAME: logis1
                 VERSION: newest
-                USERNAME: monyslim
+                USERNAME: masturrh
               run: |
                   docker build -t $USERNAME/$IMAGE_NAME:$VERSION .
                   docker push $USERNAME/$IMAGE_NAME:$VERSION

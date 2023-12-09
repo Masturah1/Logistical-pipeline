@@ -1,0 +1,18 @@
+name: "Continous integration"
+on:
+    workflow_run:
+        workflows: ["Deployment Workflow"]
+        types:
+            - completed
+jobs:
+    fetch_and_start_the_app:
+        runs-on: self-hosted
+        steps:
+            - name: "Remove container logis"
+              run: "sudo docker rm -f logis || true"
+
+            - name: "Get the code from Docker Hub"
+              run: "sudo docker pull masturrh/logis1:newest"
+
+            - name: "Run the image as a container"
+              run: "sudo docker run -d -p 80:80 --name logis masturrh/logis1:newest"
